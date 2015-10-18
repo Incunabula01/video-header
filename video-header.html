@@ -21,13 +21,15 @@
 						<h2>This is a subhead</h2>
 					</div>
 				</div>
-				<div class="video-wrapper">
-					<video id="headerVideo" autobuffer preload >
-						<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/video/Red_Square_Moscow.mp4">
+				<div id="endPoint" class="video-wrapper">
+					<video id="headerVideo"  preload="auto" >
+						<source src="/video/Red_Square_Moscow.webm" type="video/webm"/>
+						<source src="/video/Red_Square_Moscow.mp4" type="video/mp4"/>
+							
 					</video>
 				</div>
 			</header>
-			<section id="endPoint One">
+			<section id="One">
 				<div class="container">
 					<div class="inner-wrapper">
 					<div class="row">
@@ -80,44 +82,25 @@
 		$(document).ready(function(){
 
 			var videoHeader = $('#videoHeader'),
-				video = $('video')[0],
-				videoStart = 0,
-				videoDuration = 0,
+				video = document.querySelector('#headerVideo'),
 				videoText = $('.video-text'), 
 				startPoint = $('#startPoint').offset().top *10,
 				endPoint = $('#endPoint').outerHeight();
 
-			video.pause();
-			console.log(video.currentTime);
+			
+			videoText.hide();
 
 			$(window).scroll(function(e){
-				video.pause();
 				if($(window).scrollTop() >= startPoint){
 					videoText.delay('400').fadeIn('slow');
-				}else if($(window).scrollTop() <= endPoint){
+					video.play();
+				}else if ($(window).scrollTop() <= endPoint){
 					videoText.fadeOut();
+					video.pause();
 				}
 			});
-
-			video.addEventListener('timeUpdate', function(){
-				if(startPoint >= 6 && this.currentTime > startPoint){
-					this.pause();
-					video.currentTime = startPoint;
-				}else if(startPoint > 6 && this.currentTime > startPoint){
-					this.play();
-				}
-			})
-
-			setInterval(function(){
-				if(startPoint > 3 && startPoint < 6){
-					video.pause();
-				}else if (startPoint > 6 && startPoint < 7){
-					video.play();
-				}else if(startPoint >= 7 || startPoint < 3){
-					video.currentTime =endPoint;
-			}
-			}, 32);
-
+			
+			console.log(window.pageYOffset / 400);
 		});
 			
 		</script>

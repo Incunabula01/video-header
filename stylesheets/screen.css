@@ -87,13 +87,13 @@ header .inner-wrapper {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 50%;
+  height: 500px;
   overflow: hidden;
 }
 /* line 72, ../sass/_base.scss */
 .video-wrapper video {
   min-width: 100%;
-  min-height: 100%;
+  min-height: 50%;
 }
 
 /* line 78, ../sass/_base.scss */
@@ -174,7 +174,7 @@ img.photo {
 
   /* line 24, ../sass/_medium-screen.scss */
   .video-text {
-    top: 25%;
+    top: 40%;
     left: 25%;
   }
 }
