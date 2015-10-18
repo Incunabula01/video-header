@@ -1,0 +1,27 @@
+h1{
+	font-size: rhythm(4);
+	margin-bottom: 0;
+}
+
+h2{
+	font-size: rhythm(2);
+	margin-top: 0;
+}
+
+.break{
+	display: block;
+}
+
+img.photo{
+	max-width: 90%;
+}
+
+#Two{
+	background: url('../images/clouds.jpg') center center no-repeat fixed;
+	@include background-size(cover);
+}
+
+.video-text{
+	top: 25%;
+	left: 25%;
+}

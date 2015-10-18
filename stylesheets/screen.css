@@ -1,0 +1,180 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 1, ../sass/_base.scss */
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: "Georgia", "Times", serif;
+}
+/* line 106, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+body html {
+  font-size: 112.5%;
+  line-height: 1.33333em;
+}
+
+/* line 8, ../sass/_base.scss */
+h1 {
+  font-family: "Raleway", "Verdana", sans-serif;
+  margin: 0.66667em;
+  font-size: 2.66667em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 16, ../sass/_base.scss */
+h2 {
+  font-family: "Lato", "Verdana", sans-serif;
+  margin: 1.33333em;
+  font-size: 1.33333em;
+  color: #909090;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* line 25, ../sass/_base.scss */
+p {
+  font-size: 1.33333em;
+  margin: 1.33333em 0.66667em;
+  color: #595959;
+}
+/* line 29, ../sass/_base.scss */
+p:first-child {
+  margin-top: 0.66667em;
+}
+
+/* line 34, ../sass/_base.scss */
+.outer-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 0.66667em;
+}
+
+/* line 40, ../sass/_base.scss */
+.inner-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: #e7e7e7;
+  padding: 1.33333em;
+}
+
+/* line 47, ../sass/_base.scss */
+.header-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 53, ../sass/_base.scss */
+header {
+  top: 0;
+  left: 0;
+}
+/* line 56, ../sass/_base.scss */
+header .inner-wrapper {
+  padding: 0;
+}
+
+/* line 61, ../sass/_base.scss */
+.pause-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 66, ../sass/_base.scss */
+.video-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+/* line 72, ../sass/_base.scss */
+.video-wrapper video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* line 78, ../sass/_base.scss */
+.video-text {
+  position: absolute;
+  z-index: 90;
+  top: 5%;
+  left: 5%;
+  margin: 2.66667em auto;
+  text-align: center;
+}
+/* line 85, ../sass/_base.scss */
+.video-text h1, .video-text h2 {
+  color: #fff;
+}
+
+/* line 90, ../sass/_base.scss */
+img.photo {
+  margin: 2em auto 0 auto;
+  display: block;
+  max-width: 250px;
+  height: auto;
+}
+
+/* line 97, ../sass/_base.scss */
+.break {
+  display: none;
+}
+
+/* line 101, ../sass/_base.scss */
+#Two {
+  background: url("../images/clouds.jpg") center center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 104, ../sass/_base.scss */
+#Two h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 4px 2px #aaaaaa;
+  text-shadow: 0 4px 2px #222 #aaaaaa;
+  margin: 2.66667em 0;
+}
+
+@media screen and (min-width: 25em) {
+  /* line 1, ../sass/_medium-screen.scss */
+  h1 {
+    font-size: 5.33333em;
+    margin-bottom: 0;
+  }
+
+  /* line 6, ../sass/_medium-screen.scss */
+  h2 {
+    font-size: 2.66667em;
+    margin-top: 0;
+  }
+
+  /* line 11, ../sass/_medium-screen.scss */
+  .break {
+    display: block;
+  }
+
+  /* line 15, ../sass/_medium-screen.scss */
+  img.photo {
+    max-width: 90%;
+  }
+
+  /* line 19, ../sass/_medium-screen.scss */
+  #Two {
+    background: url("../images/clouds.jpg") center center no-repeat fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  /* line 24, ../sass/_medium-screen.scss */
+  .video-text {
+    top: 25%;
+    left: 25%;
+  }
+}

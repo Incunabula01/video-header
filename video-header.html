@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link href='http://fonts.googleapis.com/css?family=Lato:400,900|Raleway:100' rel='stylesheet' type='text/css'>
+    	<title>Video Header</title>
+    	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    	 <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+
+	    <!--[if IE]>
+	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	    <![endif]-->
+	</head>
+	<body>
+			<header id="videoHeader">
+				<div id="startPoint" class="inner-wrapper">
+					<div class="video-text">
+						<h1>This is a Video</h1>
+						<h2>This is a subhead</h2>
+					</div>
+				</div>
+				<div class="video-wrapper">
+					<video id="headerVideo" autobuffer preload >
+						<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/video/Red_Square_Moscow.mp4">
+					</video>
+				</div>
+			</header>
+			<section id="endPoint One">
+				<div class="container">
+					<div class="inner-wrapper">
+					<div class="row">
+							<div class="col-xs-12 col-md-5 pull-right">
+								<img class="photo" src="../images/suit-guy.jpg" alt="suit guy">
+							</div>
+							<div class="col-xs-12 col-md-7">
+								<p>Polaroid gentrify disrupt bespoke bitters tousled, Brooklyn Wes Anderson cliche paleo authentic typewriter McSweeney's church-key. Cardigan farm-to-table retro Bushwick. Leggings disrupt four dollar toast tofu, occupy organic Schlitz cray Truffaut kale chips Portland 90's ugh banjo. Next level irony fanny pack, aesthetic selfies tilde biodiesel bicycle rights Kickstarter butcher artisan whatever quinoa freegan distillery. Flannel keffiyeh actually sartorial. You probably haven't heard of them fap Banksy hoodie Odd Future American Apparel mixtape. Ugh health goth master cleanse, YOLO asymmetrical Etsy skateboard irony fingerstache Echo Park.</p>
+								<p>DIY fingerstache Williamsburg, YOLO keytar kogi disrupt wolf irony. Pug PBR&amp;B small batch, fingerstache drinking vinegar skateboard lo-fi asymmetrical hella cold-pressed flexitarian cronut master cleanse wayfarers.</p>
+							</div>
+							<div class="col-xs-12">
+								<p> Letterpress taxidermy sriracha umami Williamsburg Etsy. Beard distillery post-ironic, tattooed cronut Carles kitsch selvage Pitchfork irony master cleanse. Pitchfork mlkshk American Apparel selfies, health goth fingerstache shabby chic 90's. +1 hoodie tattooed kale chips umami. Truffaut +1 trust fund Etsy banjo, drinking vinegar single-origin coffee yr iPhone Bushwick McSweeney's.</p>
+								<p>Meh umami Odd Future put a bird on it, Wes Anderson viral wayfarers iPhone blog. Whatever fanny pack Austin street art cray Vice. Photo booth retro Brooklyn taxidermy. Raw denim before they sold out +1 jean shorts Bushwick, cardigan tofu literally umami locavore chillwave 90's messenger bag leggings. Vegan typewriter occupy tofu, blog sartorial trust fund cray McSweeney's lomo chambray. Twee yr scenester meh, listicle art party farm-to-table. Direct trade mixtape brunch pickled, hashtag butcher Truffaut keytar fixie.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="Two">
+				<div class="outer-wrapper">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="header-wrapper">
+								<h2>Banksy hoodie Odd Future <br class="break">American Apparel mixtape</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="Three">
+				<div class="container">
+					<div class="outer-wrapper">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="inner-wrapper">
+									<p>Cliche Tumblr dolor, typewriter art party 8-bit sriracha hella commodo paleo Williamsburg banjo ethical. Kitsch paleo polaroid tempor, 90's Truffaut lomo church-key chambray. Actually kitsch McSweeney's normcore, delectus Truffaut literally PBR&amp;B cardigan Vice authentic adipisicing et. Jean shorts accusamus try-hard vegan, est whatever nostrud flexitarian bespoke nihil laboris street art raw denim. Cliche ex dreamcatcher chambray, mumblecore cornhole Marfa small batch. Retro Truffaut beard, YOLO wolf cardigan veniam ugh next level Bushwick dolore swag Schlitz master cleanse. Proident quinoa Echo Park, aesthetic food truck gastropub flexitarian meh reprehenderit single-origin coffee nulla YOLO ex.</p>
+									<p>Irure you probably haven't heard of them in, irony banh mi Neutra mlkshk. Exercitation cray laboris, Banksy chambray Helvetica pour-over pariatur biodiesel try-hard vinyl Pinterest elit meggings ennui. Neutra pork belly fanny pack, Carles yr ethical forage pariatur single-origin coffee tilde blog semiotics ad. Irure put a bird on it readymade freegan, deep v anim irony PBR distillery incididunt single-origin coffee. Deep v meh twee Blue Bottle laboris Thundercats fashion axe pop-up, blog aute gastropub fingerstache assumenda messenger bag veniam. Kickstarter whatever Pinterest, mlkshk vinyl put a bird on it vero locavore accusamus VHS street art organic. You probably haven't heard of them salvia food truck post-ironic Marfa readymade.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+		
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+
+			var videoHeader = $('#videoHeader'),
+				video = $('video')[0],
+				videoStart = 0,
+				videoDuration = 0,
+				videoText = $('.video-text'), 
+				startPoint = $('#startPoint').offset().top *10,
+				endPoint = $('#endPoint').outerHeight();
+
+			video.pause();
+			console.log(video.currentTime);
+
+			$(window).scroll(function(e){
+				video.pause();
+				if($(window).scrollTop() >= startPoint){
+					videoText.delay('400').fadeIn('slow');
+				}else if($(window).scrollTop() <= endPoint){
+					videoText.fadeOut();
+				}
+			});
+
+			video.addEventListener('timeUpdate', function(){
+				if(startPoint >= 6 && this.currentTime > startPoint){
+					this.pause();
+					video.currentTime = startPoint;
+				}else if(startPoint > 6 && this.currentTime > startPoint){
+					this.play();
+				}
+			})
+
+			setInterval(function(){
+				if(startPoint > 3 && startPoint < 6){
+					video.pause();
+				}else if (startPoint > 6 && startPoint < 7){
+					video.play();
+				}else if(startPoint >= 7 || startPoint < 3){
+					video.currentTime =endPoint;
+			}
+			}, 32);
+
+		});
+			
+		</script>
+	</body>
+</html>
